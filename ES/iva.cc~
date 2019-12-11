@@ -1,0 +1,41 @@
+//
+// Scrivere una funzione chiamata aggiungi_iva con
+// questa dichiarazione:
+// 
+// void aggiungi_iva(float & prezzo,float iva);
+//
+// che aggiunge al prametro prezzo il valore
+// dell'iva in base al valore del parametro iva
+// Esempio: con 100 e 10 il nuovo valore di prezzo sarà 110
+//
+// Nel main dovranno essere acquisiti da tastiera i valori
+// di prezzo ed iva, dovrà essere chiamata la funzione
+// aggiungi_iva e dovrà essere stampato a video il nuovo prezzo
+
+#include <iostream> 
+using namespace std;
+
+void estrai(int,int&,int&,int&);
+
+int main()
+{
+  int data,giorno,mese,anno;
+  
+  cout << "Inserisci la data: ";
+  cin >> data;
+
+  estrai(data,giorno,mese,anno);
+  
+  cout << "Giorno: " << giorno <<endl;
+  cout << "Mese: " << mese << endl;
+  cout << "Anno: " << anno << endl;
+  
+  return (0);
+}
+
+void estrai(int data,int & giorno,int & mese,int & anno)
+{ 
+  anno=data%10000;
+  mese=(data/10000)%100;
+  giorno=data/1000000;
+}

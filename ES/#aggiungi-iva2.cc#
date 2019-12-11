@@ -1,0 +1,42 @@
+//
+// In ogni triangolo la somma di due lati e maggiore di quella
+// del terzo lato.
+//
+// Presi in input da tastiera tre interi, verificare
+// se questi 3 interi possono essere le misure dei lati
+// di un triangolo.
+//
+// Usando e scrivendo le seguenti funzioni:
+// int massimo(int,int,int);
+// int minimo(int,int,int);
+// int mediano(int,int,int);
+// void verifica(int,int,int,bool*);
+//
+
+#include <iostream> 
+using namespace std;
+
+void aggiungi_iva(float * valore,float iva);
+
+int main()
+{
+  float valore,iva;
+  
+  cout << "Inserisci il prezzo: ";
+  cin >> valore;
+  
+  cout << "Inserisci l'aliquota: ";
+  cin >> iva;
+  
+  aggiungi_iva(&valore,iva);
+  
+  cout << "Il prezzo con iva è " << valore << endl;
+
+  
+  return (0);
+}
+
+void aggiungi_iva(float * valore,float iva)
+{
+  *valore=*valore+*valore*iva/100;
+}
